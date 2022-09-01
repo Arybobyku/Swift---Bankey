@@ -10,6 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
 
     let titleView = UILabel()
+    let subTitleView = UILabel()
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
@@ -35,7 +36,13 @@ extension LoginViewController{
         titleView.translatesAutoresizingMaskIntoConstraints = false
         titleView.textAlignment = .center
         titleView.text = "Bankey"
-        titleView.font = .boldSystemFont(ofSize: 18)
+        titleView.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        
+        subTitleView.translatesAutoresizingMaskIntoConstraints = false
+        subTitleView.textAlignment = .center
+        subTitleView.font = UIFont.preferredFont(forTextStyle: .title3)
+        subTitleView.numberOfLines = 0
+        subTitleView.text = "Your premium source for all things banking!"
         
         loginView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -55,15 +62,23 @@ extension LoginViewController{
     
     private func layout(){
         view.addSubview(titleView)
+        view.addSubview(subTitleView)
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
         
         //Title View
         NSLayoutConstraint.activate([
-            titleView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            titleView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: titleView.trailingAnchor, multiplier: 1),
+            subTitleView.topAnchor.constraint(equalToSystemSpacingBelow: titleView.bottomAnchor, multiplier: 2),
+            titleView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        
+        //subtitle View
+        NSLayoutConstraint.activate([
+            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subTitleView.bottomAnchor, multiplier: 3),
+            subTitleView.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
+            subTitleView.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
         
         //loginView
