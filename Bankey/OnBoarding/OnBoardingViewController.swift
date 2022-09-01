@@ -13,10 +13,23 @@ class OnBoardingViewController:UIViewController{
     let imageView = UIImageView()
     let label = UILabel()
     
+    let heroImageName:String
+    let titleText:String
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         layout()
+    }
+    
+    init(heroImageName:String, titleText:String){
+        self.heroImageName = heroImageName
+        self.titleText = titleText
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 }
@@ -29,10 +42,10 @@ extension OnBoardingViewController{
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "delorean")
+        imageView.image = UIImage(named: self.heroImageName)
         
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Bankey is faster, easier to use, and has brand new look and feel that will make you feel like you are back in 1898"
+        label.text = self.titleText
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .title3)

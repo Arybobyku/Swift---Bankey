@@ -19,9 +19,11 @@ class OnBoardingContainerViewController:UIViewController{
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal,options: nil)
         
-        let page1 = ViewController1()
-        let page2 = ViewController2()
-        let page3 = ViewController3()
+        let page1 = OnBoardingViewController(
+        heroImageName: "delorean", titleText: "Bankey is faster, easier to use, and has brand new look and feel that will make you feel like you are back in 1898")
+        let page2 = OnBoardingViewController(
+        heroImageName: "world", titleText: "Bankey is faster, easier to use, and has brand new look and feel that will make you feel like you are back in 1898")
+        let page3 = OnBoardingViewController(heroImageName: "thumbs", titleText: "Bankey is faster, easier to use, and has brand new look and feel that will make you feel like you are back in 1898")
         
         pages.append(page1)
         pages.append(page2)
@@ -40,7 +42,7 @@ class OnBoardingContainerViewController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = .systemBrown
         addChild(pageViewController)
         view.addSubview(pageViewController.view)
         pageViewController.didMove(toParent: self)
@@ -98,38 +100,3 @@ extension OnBoardingContainerViewController:UIPageViewControllerDataSource{
     
 }
 
-
-class ViewController1:UIPageViewController{
-    let stackView = UIStackView()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemRed
-        style()
-        layout()
-    }
-    
-    private func style(){
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.spacing = 8
-    }
-    
-    private func layout(){
-        
-    }
-}
-
-class ViewController2:UIPageViewController{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemGreen
-    }
-}
-
-class ViewController3:UIPageViewController{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBlue
-    }
-}
