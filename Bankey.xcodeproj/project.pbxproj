@@ -16,6 +16,7 @@
 		AD34C4F428C0585900A6C8CE /* BankeyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34C4F328C0585900A6C8CE /* BankeyUITestsLaunchTests.swift */; };
 		AD34C50328C05CAC00A6C8CE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34C50228C05CAC00A6C8CE /* LoginView.swift */; };
 		AD34C50628C08F9600A6C8CE /* OnBoardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34C50528C08F9600A6C8CE /* OnBoardingContainerViewController.swift */; };
+		AD34C50828C09FEC00A6C8CE /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34C50728C09FEC00A6C8CE /* OnBoardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AD34C4F328C0585900A6C8CE /* BankeyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankeyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AD34C50228C05CAC00A6C8CE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AD34C50528C08F9600A6C8CE /* OnBoardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContainerViewController.swift; sourceTree = "<group>"; };
+		AD34C50728C09FEC00A6C8CE /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				AD34C50528C08F9600A6C8CE /* OnBoardingContainerViewController.swift */,
+				AD34C50728C09FEC00A6C8CE /* OnBoardingViewController.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				AD34C4D528C0585600A6C8CE /* LoginViewController.swift in Sources */,
 				AD34C4D128C0585600A6C8CE /* AppDelegate.swift in Sources */,
 				AD34C50628C08F9600A6C8CE /* OnBoardingContainerViewController.swift in Sources */,
+				AD34C50828C09FEC00A6C8CE /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

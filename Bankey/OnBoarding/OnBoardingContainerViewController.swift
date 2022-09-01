@@ -100,9 +100,23 @@ extension OnBoardingContainerViewController:UIPageViewControllerDataSource{
 
 
 class ViewController1:UIPageViewController{
+    let stackView = UIStackView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemRed
+        style()
+        layout()
+    }
+    
+    private func style(){
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 8
+    }
+    
+    private func layout(){
+        
     }
 }
 
