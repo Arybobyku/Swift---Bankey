@@ -7,6 +7,14 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate:AnyObject{
+    func didLogin()
+}
+
+protocol LogoutDelegate:AnyObject{
+    func didLogout()
+}
+
 class LoginViewController: UIViewController {
 
     let titleView = UILabel()
@@ -15,12 +23,18 @@ class LoginViewController: UIViewController {
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
     
+    weak var delegate:LoginViewControllerDelegate?
+    
     var username:String?{
         return loginView.usernameTextField.text
     }
     
     var password:String?{
         return loginView.passwordTextField.text
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        signInButton.configuration?.showsActivityIndicator = false
     }
     
     override func viewDidLoad() {
@@ -114,22 +128,25 @@ extension LoginViewController{
     }
     
     private func login(){
-        guard let username = username,let password = password else{
-            assertionFailure("username / password should never be nil")
-            return
-        }
+//        guard let username = username,let password = password else{
+//            assertionFailure("username / password should never be nil")
+//            return
+//        }
         
-        if username.isEmpty || password.isEmpty{
-            configureMessage(withMessage: "Username / password cannot be blank")
-            return
-        }
+        delegate?.didLogin()
         
-        if username == "Boby" && password == "123"{
-            signInButton.configuration?.showsActivityIndicator = true
-        }else{
-            configureMessage(withMessage: "Incorrect username / password")
-            return
-        }
+//        if username.isEmpty || password.isEmpty{
+//            configureMessage(withMessage: "Username / password cannot be blank")
+//            return
+//        }
+//
+//        if username == "Boby" && password == "123"{
+//            signInButton.configuration?.showsActivityIndicator = true
+//            delegate?.didLogin()
+//        }else{
+//            configureMessage(withMessage: "Incorrect username / password")
+//            return
+//        }
         
     }
     

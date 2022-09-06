@@ -7,14 +7,20 @@
 
 import UIKit
 
+protocol OnBoardingContainerViewControllerDelegate:AnyObject{
+    func didFinishOnBoarding()
+}
+
 class OnBoardingContainerViewController:UIViewController{
+    
     let pageViewController:UIPageViewController
     var pages = [UIViewController]()
-    var currentVC:UIViewController{
-        didSet{
-            
-        }
-    }
+    var currentVC:UIViewController
+    let closeButton = UIButton(type: .system)
+    let backButton = UIButton(type: .system)
+    let doneButtonn = UIButton(type: .system)
+    
+    weak var delegate:OnBoardingContainerViewControllerDelegate?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal,options: nil)
@@ -42,6 +48,13 @@ class OnBoardingContainerViewController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUp()
+        style()
+        layout()
+        
+    }
+    
+    private func setUp(){
         view.backgroundColor = .systemBrown
         addChild(pageViewController)
         view.addSubview(pageViewController.view)
@@ -59,6 +72,48 @@ class OnBoardingContainerViewController:UIViewController{
         
         pageViewController.setViewControllers([pages.first!], direction: .forward, animated: false,completion: nil)
         currentVC = pages.first!
+    }
+    
+    private func style(){
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        closeButton.setTitle("Close", for: [])
+        closeButton.setTitleColor(.white, for: [])
+        closeButton.addTarget(self, action: #selector(closeTapped), for: .primaryActionTriggered)
+        
+        doneButtonn.translatesAutoresizingMaskIntoConstraints = false
+        doneButtonn.setTitle("Done", for: [])
+        doneButtonn.setTitleColor(.white, for: [])
+        doneButtonn.addTarget(self, action: #selector(doneTapped), for: .primaryActionTriggered)
+        
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        backButton.setTitle("Back", for: [])
+        backButton.setTitleColor(.white, for: [])
+        backButton.addTarget(self, action: #selector(backTapped), for: .primaryActionTriggered)
+    }
+    
+    private func layout(){
+        view.addSubview(closeButton)
+        view.addSubview(doneButtonn)
+        view.addSubview(backButton)
+        
+        //close button
+        NSLayoutConstraint.activate([
+            closeButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            closeButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 1)
+        ])
+        
+        //back button
+        NSLayoutConstraint.activate([
+            backButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow: backButton.bottomAnchor, multiplier: 4)
+        ])
+        
+        //done button
+        NSLayoutConstraint.activate([
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: doneButtonn.trailingAnchor, multiplier: 2),
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow: doneButtonn.bottomAnchor, multiplier: 4)
+        ])
+        
     }
     
 }
@@ -100,3 +155,24 @@ extension OnBoardingContainerViewController:UIPageViewControllerDataSource{
     
 }
 
+extension OnBoardingContainerViewController{
+    
+    @objc func closeTapped(_ sender:UIButton){
+        delegate?.didFinishOnBoarding()
+    }
+    
+    @objc func doneTapped(_ sender:UIButton){
+        
+    }
+    
+    @objc func backTapped(_ sender:UIButton){
+        
+        guard let previousVC = getPreviousViewController(from: currentVC) else{
+            return
+        }
+        
+        pageViewController.setViewControllers([previousVC], direction: .reverse, animated: true, completion: nil)
+        
+    }
+    
+}
