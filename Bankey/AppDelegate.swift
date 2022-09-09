@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //        window?.rootViewController = OnBoardingContainerViewController()
         
-        mainViewController.selectedIndex = 2
+        mainViewController.selectedIndex = 0
         
         return true
     }
