@@ -21,6 +21,7 @@
 		AD34C50828C09FEC00A6C8CE /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34C50728C09FEC00A6C8CE /* OnBoardingViewController.swift */; };
 		ADF0741428C85A6500F9BBF8 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0741328C85A6500F9BBF8 /* UIViewController+Utils.swift */; };
 		ADF0741628C87AF900F9BBF8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0741528C87AF900F9BBF8 /* MainViewController.swift */; };
+		ADF0741928C8A34F00F9BBF8 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0741828C8A34F00F9BBF8 /* AccountSummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		AD34C50728C09FEC00A6C8CE /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		ADF0741328C85A6500F9BBF8 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		ADF0741528C87AF900F9BBF8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		ADF0741828C8A34F00F9BBF8 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +121,12 @@
 			isa = PBXGroup;
 			children = (
 				AD34C4D028C0585600A6C8CE /* AppDelegate.swift */,
+				ADF0741528C87AF900F9BBF8 /* MainViewController.swift */,
 				AD34C50128C05C8000A6C8CE /* Login */,
 				AD34C50428C08F5D00A6C8CE /* OnBoarding */,
+				ADF0741728C8A30000F9BBF8 /* AccountSummary */,
 				AD185F4D28C73A3500AD9AC1 /* Utils */,
 				AD34C50028C05C0400A6C8CE /* Files */,
-				ADF0741528C87AF900F9BBF8 /* MainViewController.swift */,
 			);
 			path = Bankey;
 			sourceTree = "<group>";
@@ -172,6 +175,14 @@
 				AD34C50728C09FEC00A6C8CE /* OnBoardingViewController.swift */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		ADF0741728C8A30000F9BBF8 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				ADF0741828C8A34F00F9BBF8 /* AccountSummaryViewController.swift */,
+			);
+			path = AccountSummary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +322,7 @@
 				AD34C4D528C0585600A6C8CE /* LoginViewController.swift in Sources */,
 				AD34C4D128C0585600A6C8CE /* AppDelegate.swift in Sources */,
 				ADF0741628C87AF900F9BBF8 /* MainViewController.swift in Sources */,
+				ADF0741928C8A34F00F9BBF8 /* AccountSummaryViewController.swift in Sources */,
 				AD34C50628C08F9600A6C8CE /* OnBoardingContainerViewController.swift in Sources */,
 				AD34C50828C09FEC00A6C8CE /* OnBoardingViewController.swift in Sources */,
 			);
