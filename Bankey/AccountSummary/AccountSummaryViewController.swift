@@ -21,6 +21,7 @@ class AccountSummaryViewController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        setupTableHeaderView()
     }
     
 }
@@ -29,6 +30,16 @@ extension AccountSummaryViewController{
     
     private func setup(){
         setupTableView()
+    }
+    
+    private func setupTableHeaderView(){
+        let header = AccountSummaryHeaderView(frame: .zero)
+        
+        var size = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        size.width = UIScreen.main.bounds.width
+        header.frame.size = size
+        
+        tableView.tableHeaderView = header
     }
     
     private func setupTableView(){
