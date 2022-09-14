@@ -19,6 +19,8 @@
 		AD34C50328C05CAC00A6C8CE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34C50228C05CAC00A6C8CE /* LoginView.swift */; };
 		AD34C50628C08F9600A6C8CE /* OnBoardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34C50528C08F9600A6C8CE /* OnBoardingContainerViewController.swift */; };
 		AD34C50828C09FEC00A6C8CE /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD34C50728C09FEC00A6C8CE /* OnBoardingViewController.swift */; };
+		ADA2A7FD28D1AC6D00F2886F /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2A7FC28D1AC6D00F2886F /* DecimalUtils.swift */; };
+		ADA2A7FF28D1ACCE00F2886F /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2A7FE28D1ACCE00F2886F /* CurrencyFormatter.swift */; };
 		ADF0741428C85A6500F9BBF8 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0741328C85A6500F9BBF8 /* UIViewController+Utils.swift */; };
 		ADF0741628C87AF900F9BBF8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0741528C87AF900F9BBF8 /* MainViewController.swift */; };
 		ADF0741928C8A34F00F9BBF8 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0741828C8A34F00F9BBF8 /* AccountSummaryViewController.swift */; };
@@ -61,6 +63,8 @@
 		AD34C50228C05CAC00A6C8CE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AD34C50528C08F9600A6C8CE /* OnBoardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContainerViewController.swift; sourceTree = "<group>"; };
 		AD34C50728C09FEC00A6C8CE /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		ADA2A7FC28D1AC6D00F2886F /* DecimalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtils.swift; sourceTree = "<group>"; };
+		ADA2A7FE28D1ACCE00F2886F /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		ADF0741328C85A6500F9BBF8 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		ADF0741528C87AF900F9BBF8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ADF0741828C8A34F00F9BBF8 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			children = (
 				AD185F4E28C73A4A00AD9AC1 /* LocalState.swift */,
 				ADF0741328C85A6500F9BBF8 /* UIViewController+Utils.swift */,
+				ADA2A7FC28D1AC6D00F2886F /* DecimalUtils.swift */,
+				ADA2A7FE28D1ACCE00F2886F /* CurrencyFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -346,6 +352,8 @@
 				AD185F4F28C73A4A00AD9AC1 /* LocalState.swift in Sources */,
 				AD185F4C28C71F2D00AD9AC1 /* DummyViewController.swift in Sources */,
 				ADFEB4DE28CAEFFD00155A99 /* AccountSummaryHeaderView.swift in Sources */,
+				ADA2A7FF28D1ACCE00F2886F /* CurrencyFormatter.swift in Sources */,
+				ADA2A7FD28D1AC6D00F2886F /* DecimalUtils.swift in Sources */,
 				AD34C4D528C0585600A6C8CE /* LoginViewController.swift in Sources */,
 				ADFEB4E428CB1C1500155A99 /* AccountSummaryCell.swift in Sources */,
 				AD34C4D128C0585600A6C8CE /* AppDelegate.swift in Sources */,
